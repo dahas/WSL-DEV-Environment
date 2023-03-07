@@ -1,4 +1,4 @@
-# Set up a LEMP Stack on Windows and initialise a PHP project from scratch
+# Set up a complete Development Stack on a Windows Machine using the Linux Subsystem WSL2.
 
 **Environment:**
 - Windows 10/11
@@ -9,7 +9,6 @@
 - PHP 8.1
 - MySQL 8
 - Composer
-- PHPUnit
 - Nginx
 - XDebug
 - Git
