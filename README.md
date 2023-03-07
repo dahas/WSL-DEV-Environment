@@ -96,14 +96,6 @@ Then run secure installation:
 ```
 <hr>
 
-## Install PHPUnit
-```
-~$ wget -O phpunit https://phar.phpunit.de/phpunit-9.phar
-~$ chmod +x phpunit
-~$ ./phpunit --version
-```
-<hr>
-
 ## Nginx
 ```
 ~$  sudo apt install nginx
@@ -165,39 +157,6 @@ $ sudo systemctl reload nginx
 ```
 
 Test in web browser: `http://localhost:2400`
-<hr>
-
-## Unit Testing
-Put files you want to be tested into the `tests` folder of your project. Add the suffix "*Test.php" to the file and "*Test" to the class name. 
-
-- PHPUnit tutorial: https://startutorial.com/view/phpunit-beginner-part-1-get-started 
-- PHPUnit docs: https://phpunit.de/documentation.html
-
-### Enable PHPUnit in VSCode
-In the root folder of your project create a a file named **phpunit.xml** and paste the following content into it:
-```
-// phpunit.xml
-
-<?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="vendor/autoload.php">
-  <testsuites>
-    <testsuite name="Default">
-      <directory>tests</directory>
-    </testsuite>
-  </testsuites>
-</phpunit>
-```
-Next, open the VSCode settings, search for "phpunit" and add the path to the phar file:
-
-**Path to the PHPUnit binary: "~/phpunit"**
-
-### Running the tests 
-Now you can execute your tests either by entering the following commands in the terminal ...
-```
-$ phpunit tests/FooTest.php --testdox  // Test a specific file
-$ phpunit tests --testdox  // Test all files in tests folder
-```
-or by using the **VSCode Panel** to the left of your screen.
 <hr>
 
 ## Debugging
